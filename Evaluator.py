@@ -2,7 +2,6 @@ import chess
 import chess.pgn
 import chess.engine
 
-# from crazyhouse.python.CrazyhouseGame import CrazyhouseGame as Game
 from crazyhouse.GameBoard import GameBoard
 
 STOCKFISH_PATH = r"D:\Development\SDK\stockfish_15_win_x64_avx2\stockfish_15_x64_avx2.exe"
@@ -36,34 +35,3 @@ class Evaluator():
             input()
             game_info = chess.pgn.read_game(pgn_file)
         self.engine.quit()
-
-
-# board = GameBoard("rnbqkbnr/pppp2pp/8/5p2/8/3P4/PPP1PP1P/RNBQKBNR[Pp] w KQkq - 0 5")
-# # #Now make sure you give the correct location for your stockfish engine file
-# # #...in the line that follows by correctly defining path
-# engine = chess.engine.SimpleEngine.popen_uci(FAIRY_STOCKFISH_PATH)
-# # for key in engine.options:
-# #     if key == "UCI_Variant":
-# #         print(engine.options[key])
-#
-# # if board.turn: print('White to move')
-# # else: print('black to move')
-# #
-# for el in board.legal_moves:
-#     info = engine.analyse(board, chess.engine.Limit(time=1), root_moves=[el])
-#     t = int(str(info["score"].relative))
-# #     # if t.startswith('#'):
-# #     #         print(str(board.san(el))," eval = mate in ", t)
-# #     # else: print(str(board.san(el))," eval = ", round(int(t)/100.,2))
-#     print(el.uci())
-#     print(t)
-#
-# # for key in engine.options:
-# #     if key == "UCI_Variant":
-# #         print(engine.options[key])
-# engine.quit()
-
-# print(pyffish.legal_moves("crazyhouse", "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR[] w KQkq - 0 1", []))
-
-# eval = Evaluator()
-# eval.evaluate_games(r"D:\Development\Projects\CrazyZero python\data\training\training_set.pgn")

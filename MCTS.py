@@ -52,7 +52,6 @@ class MCTS():
             winning_node = self.search(canonicalBoard.copy())
             if winning_node:
                 break
-        # print(f"{self.args.numMCTSSims} simulations done in {time.time() - start}")
 
         # get number of visits for each move
         counts = np.array([self.Nsa[(s, a)] if (s, a) in self.Nsa else 0 for a in range(self.game.getActionSize())])
